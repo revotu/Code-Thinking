@@ -1,9 +1,4 @@
----
-title: Python如何递归删除空文件夹
-date: 2017-08-09 14:11:30
-tags: [Python]
-permalink: recursively-delete-empty-directories-with-python
----
+# Python如何递归删除空文件夹 #
 Python如何递归删除空文件夹，这个问题很常见。但大多数人的解决办法都是自己实现递归函数解决这个问题，其实根本不用那么麻烦。Python中的`os.walk`提供了一种从内到外的遍历目录树的方法（设置`topdown=False`），这样由内到外判断当前目录树下是否有文件和文件夹，如果都没有则意味着当前目录树为空文件夹，`os.rmdir`删除即可。
 ```python
 #Recursively Remove Empty Directories
